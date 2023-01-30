@@ -1,25 +1,19 @@
-//============== define variable ==============
-// name
-var firstName = "Lakmal";
-var lastName = "senewirathne";
-// age
-var age = 25;
-// ============ get type of variable ============
-var firstNametype = typeof (firstName);
-var agetype = typeof (age);
-// access DOM element
-// name
-var firstNameContainer = document.querySelector('.firstName');
-var lastNameContainer = document.querySelector('.lastName');
-var firstNameTypeContainer = document.querySelector('.firstName-type');
-// age
-var ageContainer = document.querySelector('.age');
-var ageTypeContainer = document.querySelector('.age-type');
-// ===========display value===========
-// name 
-firstNameContainer.innerHTML = firstName;
-lastNameContainer.innerHTML = lastName;
-firstNameTypeContainer.innerHTML = agetype;
-// age 
-ageContainer.innerHTML = age;
-ageTypeContainer.innerHTML = agetype;
+// define arrays
+var names = [];
+// add/push values to names array
+names.push('Lakmal');
+names.push('Sunil');
+names.push('John');
+names.push('Saman');
+names.push('Sanduni');
+// delete value
+// names.pop();
+names.unshift("kamal");
+names.pop();
+names.push('Sherin');
+for (var _i = 0, names_1 = names; _i < names_1.length; _i++) {
+    var key = names_1[_i];
+    console.log(key);
+}
+var arrayContent = document.querySelector('.array-content');
+arrayContent.innerHTML = names;
