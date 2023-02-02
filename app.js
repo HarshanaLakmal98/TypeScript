@@ -1,3 +1,4 @@
+"use strict";
 // TypeScript Object
 // =====================create object with data type=====================
 // const lakmal:{
@@ -27,17 +28,17 @@
 // person.weight = "80Kg"; // will show an error message
 // ********* Solution for add new key value to object*************
 // define object with data type and assign value after defining object
-var John = {
+const John = {
     fname: 'john',
     lname: 'doe',
     age: 32,
-    country: 'USA'
+    country: 'USA',
 };
 John.weight = '67kg';
 John.married = true;
 console.log(John);
 // *****************Add value after declaring object *****************
-var car = {};
+const car = {};
 // add key value to car object
 car.brand = 'Totota';
 car.year = 2017;
