@@ -12,3 +12,20 @@
     text-align: center;
     
 }
+.image-content{
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    margin-top: 1rem;
+}
+.image-content .image{
+    width: 100%;
+    display: block;
+    cursor: pointer;
+}
+.image-content .image.image-style{
+    width: 80%;
+    height: auto;
+    border-radius: 50%;
+
+}

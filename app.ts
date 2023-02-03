@@ -12,3 +12,9 @@ let div1= document.querySelector('.demo-2') as HTMLDivElement;
 div1.classList.add('demo-2-style');
 
 div1.innerHTML='Change content using TypeScript';
+
+// access image element
+let image = document.querySelector('.image') as HTMLImageElement;
+image.addEventListener('click',()=>{
+    image.classList.toggle('image-style')
+})

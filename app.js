@@ -10,3 +10,8 @@ para1.classList.add('demo-1-style');
 let div1 = document.querySelector('.demo-2');
 div1.classList.add('demo-2-style');
 div1.innerHTML = 'Change content using TypeScript';
+// access image element
+let image = document.querySelector('.image');
+image.addEventListener('click', () => {
+    image.classList.toggle('image-style');
+});
