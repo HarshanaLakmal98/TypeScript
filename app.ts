@@ -1,59 +1,46 @@
-// ==========================================================
-// alias
-type name = string;
-type userId = string | number;
+// exercise
+// create alias and interface for mobile phone
 
-// crate a variable using alias
-let userName: name = 'Lakmal';
-console.log("User Name is : "+userName);
+// crate mobile object using alias
+type brand =string;
+type year = number;
+type model = number | string;
 
-let userId: userId = "001";
-console.log(`User Id is : ${userId}`)
-
-userId = 1;
-console.log(`User Id is : ${userId}`)
-
-// create object using alias
-const user:{
-   userName:name;
-   userId:userId;
+const mobile:{
+   brand:brand,
+   year:year,
+   model:model
 }={
-   userName:'Lakmal',
-   userId:'001'
+   brand:'Huawei',
+   year:2017,
+   model:'Y6 Pro'
 }
-console.log(user);
+console.log(mobile)
 
-// =======================================================
-// interface
-
-// without interface keyword
-type user = {
-   name:string,
-   userId:number|string
+// crate mobile object with interface
+interface mobile{
+   brand:string,
+   year:number,
+   model: number | string
 }
 
-const userObject:user={
-   name: 'Lakmal',
-   userId:'001',
+const phone:mobile ={
+   brand:'Huawei',
+   year:2017,
+   model:'Y6 Pro'
 }
-console.log(userObject);
+console.log(phone)
 
-userObject.userId=34;
-console.log(userObject);
+// extend interface
+interface modifyPhone extends mobile{
+   condition: string
+}
 
-// with interface keyword
-interface lakmal{
-   firstName: string,
-   lastname: string,
-   age: number,
+const mobilePhone:modifyPhone={
+   brand:'Huawei',
+   year:2017,
+   model:'Y6 Pro',
+   condition:'brand new'
+  
 }
-// extends interface
-interface statusLakmal extends lakmal{
-   married:boolean
-}
-const lakmal:statusLakmal={
-   firstName:'Harshana',
-   lastname:'Lakmal',
-   age:25,
-   married:false
-}
+console.log(mobilePhone)

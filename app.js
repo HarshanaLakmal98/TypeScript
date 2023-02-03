@@ -1,27 +1,22 @@
 "use strict";
-// crate a variable using alias
-let userName = 'Lakmal';
-console.log("User Name is : " + userName);
-let userId = "001";
-console.log(`User Id is : ${userId}`);
-userId = 1;
-console.log(`User Id is : ${userId}`);
-// create object using alias
-const user = {
-    userName: 'Lakmal',
-    userId: '001'
+// exercise
+// create alias and interface for mobile phone
+const mobile = {
+    brand: 'Huawei',
+    year: 2017,
+    model: 'Y6 Pro'
 };
-console.log(user);
-const userObject = {
-    name: 'Lakmal',
-    userId: '001',
+console.log(mobile);
+const phone = {
+    brand: 'Huawei',
+    year: 2017,
+    model: 'Y6 Pro'
 };
-console.log(userObject);
-userObject.userId = 34;
-console.log(userObject);
-const lakmal = {
-    firstName: 'Harshana',
-    lastname: 'Lakmal',
-    age: 25,
-    married: false
+console.log(phone);
+const mobilePhone = {
+    brand: 'Huawei',
+    year: 2017,
+    model: 'Y6 Pro',
+    condition: 'brand new'
 };
+console.log(mobilePhone);
