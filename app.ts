@@ -1,46 +1,14 @@
-// exercise
-// create alias and interface for mobile phone
+// ====================access DOM element====================
 
-// crate mobile object using alias
-type brand =string;
-type year = number;
-type model = number | string;
+// access paragraph element===============
+let para1 = document.querySelector('.demo-1') as HTMLParagraphElement;
+// add value to para1
+para1.innerHTML = 'This paragraph add by TypeScript'
+// add class using ts
+para1.classList.add('demo-1-style')
 
-const mobile:{
-   brand:brand,
-   year:year,
-   model:model
-}={
-   brand:'Huawei',
-   year:2017,
-   model:'Y6 Pro'
-}
-console.log(mobile)
+// access div element ===================
+let div1= document.querySelector('.demo-2') as HTMLDivElement;
+div1.classList.add('demo-2-style');
 
-// crate mobile object with interface
-interface mobile{
-   brand:string,
-   year:number,
-   model: number | string
-}
-
-const phone:mobile ={
-   brand:'Huawei',
-   year:2017,
-   model:'Y6 Pro'
-}
-console.log(phone)
-
-// extend interface
-interface modifyPhone extends mobile{
-   condition: string
-}
-
-const mobilePhone:modifyPhone={
-   brand:'Huawei',
-   year:2017,
-   model:'Y6 Pro',
-   condition:'brand new'
-  
-}
-console.log(mobilePhone)
+div1.innerHTML='Change content using TypeScript';

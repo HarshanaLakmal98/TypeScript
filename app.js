@@ -1,22 +1,12 @@
 "use strict";
-// exercise
-// create alias and interface for mobile phone
-const mobile = {
-    brand: 'Huawei',
-    year: 2017,
-    model: 'Y6 Pro'
-};
-console.log(mobile);
-const phone = {
-    brand: 'Huawei',
-    year: 2017,
-    model: 'Y6 Pro'
-};
-console.log(phone);
-const mobilePhone = {
-    brand: 'Huawei',
-    year: 2017,
-    model: 'Y6 Pro',
-    condition: 'brand new'
-};
-console.log(mobilePhone);
+// ====================access DOM element====================
+// access paragraph element===============
+let para1 = document.querySelector('.demo-1');
+// add value to para1
+para1.innerHTML = 'This paragraph add by TypeScript';
+// add class using ts
+para1.classList.add('demo-1-style');
+// access div element ===================
+let div1 = document.querySelector('.demo-2');
+div1.classList.add('demo-2-style');
+div1.innerHTML = 'Change content using TypeScript';
