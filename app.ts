@@ -1,32 +1,59 @@
-// Functions
-// crate basic function
-function addTwoNumber(num1: number,num2: number){
-   return num1 + num2;
-}
-console.log(addTwoNumber(2,3))
+// ==========================================================
+// alias
+type name = string;
+type userId = string | number;
 
-// Crate arrow function
-const addNumber =(n1: number,n2: number)=>{
-   return n1+n2;
-}
-console.log(`Add 1 to 9 result is : ${addNumber(1,9)}`)
+// crate a variable using alias
+let userName: name = 'Lakmal';
+console.log("User Name is : "+userName);
 
-const subNumber =() :void=>{
-   console.log("void keyword")
-   // return 8-3;
-}
-console.log(subNumber())
+let userId: userId = "001";
+console.log(`User Id is : ${userId}`)
 
+userId = 1;
+console.log(`User Id is : ${userId}`)
 
-// add optional parameters to the function
-function optionalParameter(a: number , b: number , c?:number | string){
-console.log(a+b)
+// create object using alias
+const user:{
+   userName:name;
+   userId:userId;
+}={
+   userName:'Lakmal',
+   userId:'001'
 }
-optionalParameter(8,2)
+console.log(user);
 
-// set default value to parameter
-const multipleNumber = (a: number, b: number, c: number =12)=>{
-   console.log(a*b)
-   console.log(c)
+// =======================================================
+// interface
+
+// without interface keyword
+type user = {
+   name:string,
+   userId:number|string
 }
-multipleNumber(8,4,78)
+
+const userObject:user={
+   name: 'Lakmal',
+   userId:'001',
+}
+console.log(userObject);
+
+userObject.userId=34;
+console.log(userObject);
+
+// with interface keyword
+interface lakmal{
+   firstName: string,
+   lastname: string,
+   age: number,
+}
+// extends interface
+interface statusLakmal extends lakmal{
+   married:boolean
+}
+const lakmal:statusLakmal={
+   firstName:'Harshana',
+   lastname:'Lakmal',
+   age:25,
+   married:false
+}

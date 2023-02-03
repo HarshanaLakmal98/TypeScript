@@ -1,28 +1,27 @@
 "use strict";
-// Functions
-// crate basic function
-function addTwoNumber(num1, num2) {
-    return num1 + num2;
-}
-console.log(addTwoNumber(2, 3));
-// Crate arrow function
-const addNumber = (n1, n2) => {
-    return n1 + n2;
+// crate a variable using alias
+let userName = 'Lakmal';
+console.log("User Name is : " + userName);
+let userId = "001";
+console.log(`User Id is : ${userId}`);
+userId = 1;
+console.log(`User Id is : ${userId}`);
+// create object using alias
+const user = {
+    userName: 'Lakmal',
+    userId: '001'
 };
-console.log(`Add 1 to 9 result is : ${addNumber(1, 9)}`);
-const subNumber = () => {
-    console.log("void keyword");
-    // return 8-3;
+console.log(user);
+const userObject = {
+    name: 'Lakmal',
+    userId: '001',
 };
-console.log(subNumber());
-// add optional parameters to the function
-function optionalParameter(a, b, c) {
-    console.log(a + b);
-}
-optionalParameter(8, 2);
-// set default value to parameter
-const multipleNumber = (a, b, c = 12) => {
-    console.log(a * b);
-    console.log(c);
+console.log(userObject);
+userObject.userId = 34;
+console.log(userObject);
+const lakmal = {
+    firstName: 'Harshana',
+    lastname: 'Lakmal',
+    age: 25,
+    married: false
 };
-multipleNumber(8, 4, 78);
