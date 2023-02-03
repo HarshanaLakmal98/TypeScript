@@ -1,67 +1,32 @@
-// any type
-let age :any;
-
-age = 12;
-console.log(age)
-age = '12';
-console.log(age)
-age = false;
-console.log(age)
-age = {
-   name:'lakmal'
+// Functions
+// crate basic function
+function addTwoNumber(num1: number,num2: number){
+   return num1 + num2;
 }
-console.log(age)
+console.log(addTwoNumber(2,3))
 
-// ===============any type for array===============
-let lakmal: any[]=[];
-
-lakmal=['harshana',25,false]
-console.log(lakmal)
-
-// ==============any type for object==============
-let harshana:{name: any, age: any}
-
-// assign value to object
-harshana={
-   name:'harshana',
-   age:25
+// Crate arrow function
+const addNumber =(n1: number,n2: number)=>{
+   return n1+n2;
 }
-console.log(harshana);
-harshana = {
-   name: false,
-   age: '25'
+console.log(`Add 1 to 9 result is : ${addNumber(1,9)}`)
+
+const subNumber =() :void=>{
+   console.log("void keyword")
+   // return 8-3;
 }
-console.log(harshana);
+console.log(subNumber())
 
-// create any variable
-let userId: any;
 
-// assign string value
-userId='0001';
-console.log(`Assign string value : ${userId}`);
-
-// assign number value
-userId=1;
-console.log(`Assign Number value : ${userId}`);
-
-// assign number array 
-userId=[1,2,3]
-console.log(`Assign Number array : ${userId}`);
-
-// assign string array
-userId = ['1','2','3'];
-console.log(`Assign string array : ${userId}`);
-
-// assign mixed array
-userId= ['1',2,'3']
-console.log(`Assign Mixed array : ${userId}`);
-
-// assign object
-userId ={
-   name:'Lakmal',
-   id:1,
-   leader:false
+// add optional parameters to the function
+function optionalParameter(a: number , b: number , c?:number | string){
+console.log(a+b)
 }
-console.log(`Assign object : ${userId}`);
-console.log(`Assign object : ${userId.name}`);
-console.log(userId)
+optionalParameter(8,2)
+
+// set default value to parameter
+const multipleNumber = (a: number, b: number, c: number =12)=>{
+   console.log(a*b)
+   console.log(c)
+}
+multipleNumber(8,4,78)
