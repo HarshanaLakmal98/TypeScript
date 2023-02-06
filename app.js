@@ -1,22 +1,17 @@
 "use strict";
-// exercise
-// create alias and interface for mobile phone
-const mobile = {
-    brand: 'Huawei',
-    year: 2017,
-    model: 'Y6 Pro'
-};
-console.log(mobile);
-const phone = {
-    brand: 'Huawei',
-    year: 2017,
-    model: 'Y6 Pro'
-};
-console.log(phone);
-const mobilePhone = {
-    brand: 'Huawei',
-    year: 2017,
-    model: 'Y6 Pro',
-    condition: 'brand new'
-};
-console.log(mobilePhone);
+// Class
+class User {
+    constructor(fname, lname, age) {
+        this.fname = fname;
+        this.lname = lname;
+        this.age = age;
+    }
+    // create method
+    fullName() {
+        return `Full Name is : ${this.fname} ${this.lname}`;
+    }
+}
+// crate userOne object using User class
+const userOne = new User('Harshana', 'Lakmal', 25);
+console.log(userOne);
+userOne.fullName();
