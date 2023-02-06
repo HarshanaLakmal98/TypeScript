@@ -36,6 +36,12 @@ class Car {
 };
 // create carOne object
 const carOne = new Car ('M 20', 'Honda',2022);
+const carTwo = new Car ('zbr', 'Toyota',2023);
 console.log(carOne.brand)
 console.log(carOne.details())
 
+// add class object ot an array
+const cars:Car[]=[];
+cars.push(carOne)
+cars.push(carTwo);
+console.log(cars)
